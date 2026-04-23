@@ -1,0 +1,215 @@
+<h2 class="sr-only">Dashboard summarising the Simplify credit scoring results for 226 sole proprietors, showing 24 eligible for pilot loans totalling 9.8 million TZS</h2>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .dashboard { font-family: var(--font-sans); color: var(--color-text-primary); padding: 0.5rem 0; }
+  .section-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); margin: 20px 0 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .section-label:first-child { margin-top: 0; }
+  .metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .metric { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 14px 16px; }
+  .metric-label { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .metric-val { font-size: 22px; font-weight: 500; line-height: 1.1; }
+  .metric-sub { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .band-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; }
+  .band-card.a { border-left: 3px solid #1D9E75; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0; }
+  .band-card.b { border-left: 3px solid #378ADD; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0; }
+  .band-card.c { border-left: 3px solid #EF9F27; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0; }
+  .band-card.d { border-left: 3px solid #B4B2A9; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0; }
+  .band-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .band-count { font-size: 20px; font-weight: 500; }
+  .band-meta { font-size: 11px; color: var(--color-text-secondary); margin-top: 4px; }
+  .top-list { list-style: none; padding: 0; margin: 0; }
+  .top-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; }
+  .top-item:last-child { border-bottom: none; }
+  .rank { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: var(--color-background-secondary); text-align: center; line-height: 20px; font-size: 11px; margin-right: 10px; font-weight: 500; }
+  .name-block { display: flex; align-items: center; flex: 1; min-width: 0; }
+  .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .score-badge { font-size: 11px; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+  .bar-row { margin-bottom: 8px; }
+  .bar-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 3px; }
+  .bar-track { height: 8px; background: var(--color-background-secondary); border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .callout { background: var(--color-background-info); border-radius: var(--border-radius-md); padding: 12px 14px; font-size: 12px; color: var(--color-text-info); line-height: 1.55; margin-top: 6px; }
+</style>
+
+<div class="dashboard">
+
+<div class="section-label">Overview — 6-month window, Oct 2025 to Mar 2026</div>
+<div class="metric-grid">
+  <div class="metric">
+    <div class="metric-label">Total scored</div>
+    <div class="metric-val">226</div>
+    <div class="metric-sub">Current sole proprietors</div>
+  </div>
+  <div class="metric">
+    <div class="metric-label">Eligible</div>
+    <div class="metric-val" style="color: #0F6E56;">24</div>
+    <div class="metric-sub">11% approval rate</div>
+  </div>
+  <div class="metric">
+    <div class="metric-label">Pilot book</div>
+    <div class="metric-val">9.8M</div>
+    <div class="metric-sub">TZS at suggested limits</div>
+  </div>
+  <div class="metric">
+    <div class="metric-label">Median loan</div>
+    <div class="metric-val">280K</div>
+    <div class="metric-sub">TZS per SME</div>
+  </div>
+</div>
+
+<div class="section-label">Risk band breakdown</div>
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+  <div class="band-card a">
+    <div class="band-title" style="color: #0F6E56;">A — Low Risk</div>
+    <div class="band-count">4</div>
+    <div class="band-meta">Score ≥ 75 · 1.7M book</div>
+  </div>
+  <div class="band-card b">
+    <div class="band-title" style="color: #185FA5;">B — Moderate</div>
+    <div class="band-count">12</div>
+    <div class="band-meta">Score 60–74 · 4.0M book</div>
+  </div>
+  <div class="band-card c">
+    <div class="band-title" style="color: #854F0B;">C — Elevated</div>
+    <div class="band-count">8</div>
+    <div class="band-meta">Score 45–59 · 4.0M book</div>
+  </div>
+  <div class="band-card d">
+    <div class="band-title" style="color: #5F5E5A;">D — Decline</div>
+    <div class="band-count">202</div>
+    <div class="band-meta">Insufficient data or below floor</div>
+  </div>
+</div>
+
+<div class="two-col" style="margin-top: 24px;">
+  <div>
+    <div class="section-label" style="margin-top: 0;">Top 5 eligible SMEs</div>
+    <ul class="top-list">
+      <li class="top-item">
+        <div class="name-block"><span class="rank">1</span><span class="name">Naima Ashtoni Mbiru</span></div>
+        <div><span class="score-badge" style="background: #E1F5EE; color: #0F6E56;">84 · A</span><span style="color: var(--color-text-secondary); font-size: 12px; margin-left: 6px;">740K</span></div>
+      </li>
+      <li class="top-item">
+        <div class="name-block"><span class="rank">2</span><span class="name">Benard John Ikombe</span></div>
+        <div><span class="score-badge" style="background: #E1F5EE; color: #0F6E56;">81 · A</span><span style="color: var(--color-text-secondary); font-size: 12px; margin-left: 6px;">140K</span></div>
+      </li>
+      <li class="top-item">
+        <div class="name-block"><span class="rank">3</span><span class="name">Awadhi Mohamed Ally</span></div>
+        <div><span class="score-badge" style="background: #E1F5EE; color: #0F6E56;">79 · A</span><span style="color: var(--color-text-secondary); font-size: 12px; margin-left: 6px;">160K</span></div>
+      </li>
+      <li class="top-item">
+        <div class="name-block"><span class="rank">4</span><span class="name">Suzana Clemence Mpinge</span></div>
+        <div><span class="score-badge" style="background: #E1F5EE; color: #0F6E56;">78 · A</span><span style="color: var(--color-text-secondary); font-size: 12px; margin-left: 6px;">700K</span></div>
+      </li>
+      <li class="top-item">
+        <div class="name-block"><span class="rank">5</span><span class="name">Stanley Adam Kaduri</span></div>
+        <div><span class="score-badge" style="background: #E6F1FB; color: #185FA5;">73 · B</span><span style="color: var(--color-text-secondary); font-size: 12px; margin-left: 6px;">490K</span></div>
+      </li>
+    </ul>
+  </div>
+  
+  <div>
+    <div class="section-label" style="margin-top: 0;">Why 202 were declined</div>
+    <div class="bar-row">
+      <div class="bar-label"><span>No sales in window</span><span>81</span></div>
+      <div class="bar-track"><div class="bar-fill" style="background: #888780; width: 40%;"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><span>Only 1 active month</span><span>75</span></div>
+      <div class="bar-track"><div class="bar-fill" style="background: #888780; width: 37%;"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><span>Loan limit below 100K floor</span><span>6</span></div>
+      <div class="bar-track"><div class="bar-fill" style="background: #B4B2A9; width: 3%;"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><span>Fewer than 5 invoices</span><span>6</span></div>
+      <div class="bar-track"><div class="bar-fill" style="background: #B4B2A9; width: 3%;"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><span>Revenue below 500K floor</span><span>7</span></div>
+      <div class="bar-track"><div class="bar-fill" style="background: #B4B2A9; width: 3.5%;"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><span>Not active last 2 months</span><span>2</span></div>
+      <div class="bar-track"><div class="bar-fill" style="background: #B4B2A9; width: 1%;"></div></div>
+    </div>
+    <div class="callout">77% of declines are "not ready yet", not "bad borrowers". These should be re-scored monthly.</div>
+  </div>
+</div>
+
+<div class="section-label" style="margin-top: 28px;">Scoring dimensions — what separates the tiers</div>
+<div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 10px;">Average component scores per band (0–100). Shows where each tier is strong or weak.</div>
+
+<div style="display: flex; gap: 12px; font-size: 11px; color: var(--color-text-secondary); margin-bottom: 10px;">
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #1D9E75;"></span>A (Low)</span>
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #378ADD;"></span>B (Moderate)</span>
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #EF9F27;"></span>C (Elevated)</span>
+</div>
+
+<div style="display: grid; grid-template-columns: 160px 1fr; gap: 8px 14px; align-items: center; font-size: 12px;">
+  <div>Revenue Consistency</div>
+  <div style="display: flex; gap: 4px; height: 18px;">
+    <div style="background: #1D9E75; width: 60%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">60</div>
+    <div style="background: #378ADD; width: 62%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">62</div>
+    <div style="background: #EF9F27; width: 29%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">29</div>
+  </div>
+  
+  <div>Activity & Trajectory</div>
+  <div style="display: flex; gap: 4px; height: 18px;">
+    <div style="background: #1D9E75; width: 82%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">82</div>
+    <div style="background: #378ADD; width: 75%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">75</div>
+    <div style="background: #EF9F27; width: 72%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">72</div>
+  </div>
+  
+  <div>Customer Diversification</div>
+  <div style="display: flex; gap: 4px; height: 18px;">
+    <div style="background: #1D9E75; width: 92%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">92</div>
+    <div style="background: #378ADD; width: 54%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">54</div>
+    <div style="background: #EF9F27; width: 42%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">42</div>
+  </div>
+  
+  <div>Transaction Rhythm</div>
+  <div style="display: flex; gap: 4px; height: 18px;">
+    <div style="background: #1D9E75; width: 93%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">93</div>
+    <div style="background: #378ADD; width: 68%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">68</div>
+    <div style="background: #EF9F27; width: 40%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">40</div>
+  </div>
+  
+  <div>Buyer Quality</div>
+  <div style="display: flex; gap: 4px; height: 18px;">
+    <div style="background: #1D9E75; width: 72%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">72</div>
+    <div style="background: #378ADD; width: 78%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">78</div>
+    <div style="background: #EF9F27; width: 96%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">96</div>
+  </div>
+  
+  <div>Tenure & Track Record</div>
+  <div style="display: flex; gap: 4px; height: 18px;">
+    <div style="background: #1D9E75; width: 91%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">91</div>
+    <div style="background: #378ADD; width: 59%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">59</div>
+    <div style="background: #EF9F27; width: 56%; border-radius: 3px; color: white; font-size: 10px; padding-left: 6px; line-height: 18px;">56</div>
+  </div>
+</div>
+
+<div class="callout" style="margin-top: 16px;">Key insight: Band C's strongest dimension is buyer quality (96), but weakest is revenue consistency (29) and diversification (42). These businesses have good buyers but too few of them, and volatile revenue. The model catches what BlackSwan's monthly-aggregate view missed.</div>
+
+<div class="section-label" style="margin-top: 28px;">Pilot rollout recommendation</div>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+  <div class="metric">
+    <div class="metric-label">Wave 1</div>
+    <div class="metric-val">4 SMEs</div>
+    <div class="metric-sub">Band A only · 1.7M book · Week 1</div>
+  </div>
+  <div class="metric">
+    <div class="metric-label">Wave 2</div>
+    <div class="metric-val">+12 SMEs</div>
+    <div class="metric-sub">Add Band B · 5.7M cumulative · After 30-day cycle</div>
+  </div>
+  <div class="metric">
+    <div class="metric-label">Wave 3</div>
+    <div class="metric-val">+8 SMEs</div>
+    <div class="metric-sub">Add Band C · 9.8M total · Close monitoring</div>
+  </div>
+</div>
+</div>

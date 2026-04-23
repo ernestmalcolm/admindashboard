@@ -1,8 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Simplify Admin Dashboard MVP
 
-## Getting Started
+Admin dashboard MVP built with Next.js and Mantine. Includes mock login, role-based access, and access control management for demo/testing flows.
 
-First, run the development server:
+## Local Development
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +16,56 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Production Readiness Checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Before deploying, run:
 
-## Learn More
+```bash
+npm run lint
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Both must pass locally.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy to Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 1) Create and push a GitHub repo
 
-## Deploy on Vercel
+```bash
+git init
+git add .
+git commit -m "Initial admin dashboard MVP"
+git branch -M main
+git remote add origin <your-github-repo-url>
+git push -u origin main
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2) Import the repo in Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Go to [https://vercel.com/new](https://vercel.com/new)
+- Import your GitHub repository
+- Framework preset: `Next.js` (auto-detected)
+- Build command: `next build` (default)
+- Output setting: leave default
+- Deploy
+
+### 3) Environment variables
+
+This MVP currently uses mock/local data and does not require mandatory env vars.
+If you later add API keys or backend URLs, define them in:
+
+- Vercel Project Settings -> Environment Variables
+- Local `.env.local` (already ignored by `.gitignore`)
+
+### 4) Continuous deployment
+
+After initial setup:
+
+- every push to `main` triggers production deployment
+- pull requests can be configured for preview deployments
+
+## Notes
+
+- Project is configured with `turbopack.root` in `next.config.mjs` to avoid root-detection warnings in nested workspace setups.
