@@ -26,7 +26,7 @@ export default function Home() {
             Choose a mock account to switch views by role and permissions.
           </Text>
           <Select
-            label="Mock account"
+            label={`Mock account (${getRoleLabel(selectedAccount?.role)})`}
             value={accountId}
             onChange={(value) => {
               const nextId = value || accounts[0]?.id || "";
@@ -37,7 +37,7 @@ export default function Home() {
             }}
             data={accounts.map((account) => ({
               value: account.id,
-              label: account.name,
+              label: `${account.name} - ${getRoleLabel(account.role)}`,
             }))}
           />
           <TextInput label="Display name" value={name} onChange={(e) => setName(e.currentTarget.value)} />
